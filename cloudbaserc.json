@@ -1,0 +1,34 @@
+{
+  "version": "2.0",
+  "envId": "{{env.ENV_ID}}",
+  "framework": {
+    "name": "grafana",
+    "plugins": {
+      "client": {
+        "use": "@cloudbase/framework-plugin-container",
+        "inputs": {
+          "mode": "low-cost",
+          "serviceName": "grafana",
+          "servicePath": "/",
+          "uploadType": "image",
+          "containerPort": 3000,
+          "imageInfo": {
+            "imageUrl": "grafana/grafana:7.3.0"
+          },
+          "envVariables": {},
+          "volumeMounts": {
+            "/var/lib/grafana": "GRAFANA_CFS"
+          }
+        }
+      }
+    },
+    "requirement": {
+      "addons": [
+        {
+          "type": "CFS",
+          "name": "GRAFANA_CFS"
+        }
+      ]
+    }
+  }
+}
