@@ -10,11 +10,9 @@
           "mode": "low-cost",
           "serviceName": "grafana",
           "servicePath": "/",
-          "uploadType": "image",
+          "localPath": "./",
+          "uploadType": "package",
           "containerPort": 3000,
-          "imageInfo": {
-            "imageUrl": "grafana/grafana:7.3.0"
-          },
           "envVariables": {},
           "volumeMounts": {
             "/var/lib/grafana": "grafana-cfs"
