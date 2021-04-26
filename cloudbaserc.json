@@ -15,7 +15,7 @@
           "containerPort": 3000,
           "envVariables": {},
           "volumeMounts": {
-            "/var/lib/grafana": "grafana-cfs"
+            "/var/lib/grafana": "grafana-cfs/gr-data"
           }
         }
       }
