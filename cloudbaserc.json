@@ -9,7 +9,7 @@
         "inputs": {
           "mode": "low-cost",
           "serviceName": "redis",
-          "servicePath": "/",
+          "servicePath": "/redis",
           "localPath": "./",
           "uploadType": "image",
           "imageInfo": {
