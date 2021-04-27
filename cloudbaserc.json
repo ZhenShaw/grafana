@@ -13,9 +13,9 @@
           "localPath": "./",
           "uploadType": "image",
           "imageInfo": {
-            "imageUrl": "ccr.ccs.tencentyun.com/tcb-100004423121-pgga/app-1265f5_redis"
+            "imageUrl": "ccr.ccs.tencentyun.com/tcb_public/grafana_grafana:7.2.0"
           },
-          "containerPort": 6379,
+          "containerPort": 3000,
           "envVariables": {},
           "volumeMounts": {
             "/data": "redis-cfs"
