@@ -2,20 +2,23 @@
   "version": "2.0",
   "envId": "{{env.ENV_ID}}",
   "framework": {
-    "name": "grafana",
+    "name": "redis",
     "plugins": {
       "client": {
         "use": "@cloudbase/framework-plugin-container",
         "inputs": {
           "mode": "low-cost",
-          "serviceName": "grafana",
+          "serviceName": "redis",
           "servicePath": "/",
           "localPath": "./",
-          "uploadType": "package",
-          "containerPort": 3000,
+          "uploadType": "image",
+          "imageInfo": {
+            "imageUrl": "ccr.ccs.tencentyun.com/tcb-100004423121-pgga/app-1265f5_redis"
+          },
+          "containerPort": 6379,
           "envVariables": {},
           "volumeMounts": {
-            "/var/lib/grafana": "grafana-cfs/app-data"
+            "/data": "grafana-cfs"
           }
         }
       }
@@ -28,5 +31,8 @@
         }
       ]
     }
-  }
+  },
+  "functionRoot": "./functions",
+  "functions": [],
+  "region": "ap-shanghai"
 }
